@@ -1,0 +1,11 @@
+version: "3"
+services:
+  go:
+    container_name: build
+    image: heroiclabs/nakama-pluginbuilder:3.1.2
+    working_dir: /builder
+    volumes:
+      - .:/builder
+      - buildgodir:/go
+volumes:
+  buildgodir:
